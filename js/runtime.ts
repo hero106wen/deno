@@ -318,7 +318,7 @@ class TypeScriptHost implements ts.LanguageServiceHost {
   }
 
   getDefaultLibFileName(options: ts.CompilerOptions): string {
-    const fn = ts.getDefaultLibFileName(options);
+    const fn = "lib.es2017.d.ts"; // ts.getDefaultLibFileName(options);
     util.log("getDefaultLibFileName", fn);
     const m = resolveModule(fn, "/$asset$/");
     return m.fileName;
